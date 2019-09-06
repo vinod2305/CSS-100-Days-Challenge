@@ -1,0 +1,89 @@
+$bezier: cubic-bezier(.21,.98,.6,.99);
+.container{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #E56262;
+  margin-top:-200px;
+  margin-left:-200px;
+  border: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0,0,0,0.3);
+  color:#fff;
+
+  .center{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 90px;
+    left: 90px;
+  
+    .dot1{
+      position:absolute;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      top: 95px;
+	    left: 95px;
+      border-radius: 50%;
+      z-index: 3;
+      animation-fill-mode: both;
+      animation: dot-1 2s $bezier infinite alternate;
+    }
+    .dot2{
+      position:absolute;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      top: 80px;
+	    left: 80px;
+      border-radius: 50%;
+      z-index: 2;
+      animation-fill-mode: both;
+      animation: dot-2 2s $bezier infinite alternate;
+    }
+    .dot3{
+      position:absolute;
+      width: 90px;
+      height: 90px;
+      background: #fff;
+      top: 65px;
+	    left: 65px;
+      border-radius: 50%;
+      z-index: 1;
+      animation-fill-mode: both;
+      animation: dot-3 2s $bezier infinite alternate;
+    }
+}
+}
+@keyframes dot-2{
+  0%,40%{
+    box-shadow:2px 2px 3px 2px rgba(0,0,0,0.2);
+    transform:scale(0);
+  }
+  100%{
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3); 
+  }
+}
+@keyframes dot-1{
+  0%,70%{
+    box-shadow:2px 2px 3px 2px rgba(0,0,0,0.2);
+    transform:scale(0);
+  }
+  100%{
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3); 
+  }
+}
+@keyframes dot-3{
+  0%,10%{
+    box-shadow:2px 2px 3px 2px rgba(0,0,0,0.2);
+    transform:scale(0);
+  }
+  100%{
+    transform: scale(1);
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3); 
+  }
+}
