@@ -1,0 +1,103 @@
+.frame {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  background: #5A717B;
+  color: #fff;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 130px;
+  top: 135px;
+  left: 0;
+  transform: perspective(60px);
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 130px;
+  width: 140px;
+  height: 130px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+.card .top {
+  width: 100%;
+  height: 30px;
+  background: #FF9800;
+}
+.card .content {
+  padding: 17px 14px;
+}
+.card .line {
+  height: 4px;
+  background: #E9E9E9;
+  margin-bottom: 6px;
+}
+
+.card-1 {
+  animation: switch-1 5s ease-in-out infinite both;
+}
+
+.card-2 {
+  animation: switch-2 5s ease-in-out infinite both;
+}
+
+.card-3 {
+  animation: switch-3 5s ease-in-out infinite both;
+}
+
+@keyframes switch-1 {
+  0%,100% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+  33.33% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  66.66% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes switch-2 {
+  0%,100% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  33.33% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  66.66% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes switch-3 {
+  0%, 100% {
+    transform: translate3d(-145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+  33.33% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  66.66% {
+    transform: translate3d(145px, 0, -45px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+}
