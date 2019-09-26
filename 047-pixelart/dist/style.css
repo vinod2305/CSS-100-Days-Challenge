@@ -1,0 +1,38 @@
+.frame {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #DE4738;
+  color: #fff;
+}
+
+.pixel {
+  float: left;
+}
+.pixel input {
+  display: none;
+}
+.pixel label {
+  box-sizing: border-box;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E24E3F;
+  cursor: pointer;
+}
+.pixel label:hover {
+  background: #EC5142;
+  border-color: #E24E3F;
+}
+.pixel input:checked ~ label {
+  background: #fff;
+  border-color: #fff;
+}
