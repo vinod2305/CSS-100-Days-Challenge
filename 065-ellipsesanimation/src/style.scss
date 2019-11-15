@@ -1,0 +1,62 @@
+$radius: 150;
+$numberOfEllipses: 18; 
+$closingFactor: 0.6;
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  width: 400px;
+  height: 400px;
+  box-shadow: 1px 2px 10px 0 rgba(0,0,0,0.3);
+  background: #1F91DD;
+  color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.form{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50px;
+  left: 50px;
+}
+
+.ellipse{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: (($radius - ($radius * $closingFactor)/2))+px;
+  width: ($radius * $closingFactor)+px;
+  height: 300px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: all .5s ease-in-out;
+}
+
+@for $i from 1 through $numberOfEllipses{
+ $nullBase: $i - 1;
+  $degree: (180/$numberOfEllipses) * $nullBase;
+  .ellipse-#{$i}{
+    animation: ellipse-#{$i} 5s ease-in-out infinite;
+  }
+  
+  @keyframes ellipse-#{$i}{
+    0%{
+      transform: rotate(($degree)+deg);
+      border-radius: 50%;
+      border-width: 1px;
+    }
+    50% {
+			transform: rotate(0) scaleX(2 / $closingFactor);
+			border-radius: 0%;;
+		}
+		100% {
+			transform: rotate( ((-1 * $degree) + 360)+deg );
+			border-radius: 50%;
+			border-width: 1px;
+		}
+  }
+}
