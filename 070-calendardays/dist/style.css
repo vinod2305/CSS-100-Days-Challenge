@@ -1,0 +1,43 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  width: 400px;
+  height: 400px;
+  background: #512626;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.card {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #E27474;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 55px;
+}
+.card:hover {
+  box-shadow: inset 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+}
+.card .text {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
+.card .number {
+  display: block;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+}
